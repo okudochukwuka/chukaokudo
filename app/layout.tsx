@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Newsreader, IBM_Plex_Sans } from "next/font/google";
+import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
-const newsreader = Newsreader({
+const display = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["500", "600", "700"],
   variable: "--font-newsreader",
 });
 
@@ -17,9 +18,9 @@ const plex = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Cybersecurity for Beginners — Chuka Okudo",
+  title: "Chuka Okudo — AI, IT & Cybersecurity",
   description:
-    "A plain-English cybersecurity guide for beginners, by Chuka Okudo.",
+    "Learn AI, IT and cybersecurity in plain English, or hire someone who's spent 10+ years in the field. By Chuka Okudo.",
 };
 
 export default function RootLayout({
@@ -28,11 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${plex.variable}`}>
+    <html lang="en" className={`${display.variable} ${plex.variable}`}>
       <body className="font-sans">
         <Nav />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

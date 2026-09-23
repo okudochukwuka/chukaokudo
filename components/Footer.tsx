@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
     <footer className="border-t border-line py-10">
-      <div className="mx-auto flex max-w-[1080px] flex-wrap items-center justify-between gap-4 px-7">
+      <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-between gap-4 px-7">
         <span className="text-sm text-inkSoft">
           &copy; {new Date().getFullYear()} Chuka Okudo
         </span>
         <ul className="flex gap-6">
           <li>
-            <a href="mailto:hello@chukaokudo.com" className="text-sm text-inkSoft">
+            <a href="mailto:okudochukwuka@gmail.com" className="text-sm text-inkSoft">
               Contact
             </a>
           </li>
