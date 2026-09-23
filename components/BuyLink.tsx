@@ -14,7 +14,7 @@ export default function BuyLink({
       rel="noopener noreferrer"
       className={
         className ??
-        "inline-block rounded bg-sage px-6 py-[11px] text-sm font-semibold text-white hover:bg-sageDark"
+        "inline-block rounded bg-sage px-6 py-[11px] text-sm font-semibold text-paper hover:bg-sageDark"
       }
     >
       {label}

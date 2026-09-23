@@ -5,14 +5,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#16202B",
-        inkSoft: "#4B5A68",
-        paper: "#FFFFFF",
-        band: "#EEF1F0",
-        sage: "#3E7C74",
-        sageDark: "#2C5B55",
-        amber: "#E2A63B",
-        line: "#DDE3E1",
+        ink: "#F2EFE7",
+        inkSoft: "#A8A296",
+        paper: "#0B0C0E",
+        band: "#141619",
+        sage: "#6E9BC2",
+        sageDark: "#4C7699",
+        amber: "#6E9BC2",
+        line: "#2A2C30",
       },
       fontFamily: {
         serif: ["var(--font-newsreader)", "serif"],

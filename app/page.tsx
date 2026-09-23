@@ -12,11 +12,11 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1080px] grid-cols-1 gap-16 px-7 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div>
             <div className="mb-7 flex flex-wrap items-baseline gap-3 text-inkSoft">
-              <span className="text-[#8A2E28] line-through decoration-2">
+              <span className="text-[#D9695E] line-through decoration-2">
                 Phishing
               </span>
               <span>&#8594;</span>
-              <span className="font-semibold text-sageDark">
+              <span className="font-semibold text-sage">
                 someone tricking you into clicking a fake link
               </span>
             </div>
@@ -31,13 +31,22 @@ export default function Home() {
               <BuyLink label={`Get the PDF — ${product.price}`} />
             </div>
           </div>
-          <div className="rounded-md border border-line bg-band p-9">
-            <div className="flex aspect-[3/4] flex-col justify-between rounded bg-ink p-7 text-white">
-              <span className="text-sm text-[#9FB3AC]">The Guide</span>
-              <h3 className="max-w-[14ch] font-serif text-2xl">
-                Cybersecurity for Beginners
-              </h3>
-              <span className="text-sm text-[#9FB3AC]">by Chuka Okudo</span>
+          <div className="relative">
+            <div className="absolute -inset-2 rounded-lg border border-sage/40" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-md border border-line">
+              <Image
+                src="/chuka-portrait.jpg"
+                alt="Chuka Okudo speaking on stage"
+                fill
+                priority
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-paper via-paper/70 to-transparent p-6 pt-14">
+                <p className="font-serif text-lg text-ink">Chuka Okudo</p>
+                <p className="text-sm text-inkSoft">
+                  IT &amp; cybersecurity, explained simply
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -86,8 +95,13 @@ export default function Home() {
       {/* ABOUT */}
       <section id="about" className="py-24">
         <div className="mx-auto grid max-w-[1080px] grid-cols-1 gap-9 px-7 md:grid-cols-[140px_1fr]">
-          <div className="flex h-[140px] w-[140px] items-center justify-center rounded-full bg-gradient-to-br from-sage to-sageDark font-serif text-4xl text-white">
-            CO
+          <div className="relative h-[140px] w-[140px] overflow-hidden rounded-full border-2 border-sage">
+            <Image
+              src="/chuka-portrait.jpg"
+              alt="Chuka Okudo"
+              fill
+              className="object-cover"
+            />
           </div>
           <div>
             <h2 className="mb-4 font-serif text-2xl font-medium">
@@ -163,12 +177,12 @@ export default function Home() {
               />
             ) : (
               // Placeholder until a real cover image is added in lib/product.ts
-              <div className="flex aspect-[3/4] flex-col justify-between bg-ink p-7 text-white">
-                <span className="text-sm text-[#9FB3AC]">The Guide</span>
-                <h3 className="max-w-[14ch] font-serif text-2xl">
+              <div className="flex aspect-[3/4] flex-col justify-between bg-band p-7 text-ink">
+                <span className="text-sm text-inkSoft">The Guide</span>
+                <h3 className="max-w-[14ch] font-serif text-2xl text-sage">
                   {product.title}
                 </h3>
-                <span className="text-sm text-[#9FB3AC]">by Chuka Okudo</span>
+                <span className="text-sm text-inkSoft">by Chuka Okudo</span>
               </div>
             )}
           </div>
@@ -203,7 +217,7 @@ export default function Home() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="block rounded border border-line bg-white p-7"
+                className="block rounded border border-line bg-band p-7 transition hover:border-sage/50"
               >
                 <div className="mb-3 text-sm font-semibold text-sageDark">
                   {post.tag}
