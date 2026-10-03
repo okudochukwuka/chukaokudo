@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b0c0e;
+  color: #f2efe7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeUp,
+  .animate-pulseRing {
+    animation: none !important;
+  }
+}
